@@ -11,7 +11,7 @@
   /*========== font & typography ==========*/
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 4.4rem;
-  --h2-font-size: 2rem;
+  --h2-font-size: 3rem;
   --normal-font-size: 1.6rem;
 
   /*========== font weight ==========*/
@@ -43,6 +43,11 @@ body {
 
 button {
   border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -81,6 +86,11 @@ button {
 
 .cell:hover {
   background-color: #ffebcd;
+}
+
+.game-status {
+  font-size: var(--normal-font-size);
+  margin-bottom: 2.4rem;
 }
 
 .player-x,
@@ -134,7 +144,7 @@ button {
   padding: 2em;
   border-radius: 1rem;
   width: 350px;
-  height: 200px;
+  height: 250px;
 }
 
 .show-popup {
@@ -144,6 +154,93 @@ button {
 .hide-popup {
   display: none;
 }
+
+.game-winner img {
+  width: 100px;
+}
+
+.game-msg {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.confetti {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  animation: confetti 5s ease-in-out -2s infinite;
+}
+
+.confetti:nth-child(1) {
+  background-color: #f2d74e;
+  left: 10%;
+}
+
+.confetti:nth-child(2) {
+  background-color: #95c3de;
+  left: 20%;
+  animation-delay: -5s;
+}
+
+.confetti:nth-child(3) {
+  background-color: #ff9a91;
+  left: 30%;
+  animation-delay: -3s;
+}
+
+.confetti:nth-child(4) {
+  background-color: #f2d74e;
+  left: 40%;
+  animation-delay: -2.5s;
+}
+
+.confetti:nth-child(5) {
+  background-color: #95c3de;
+  left: 50%;
+  animation-delay: -4s;
+}
+
+.confetti:nth-child(6) {
+  background-color: #ff9a91;
+  left: 60%;
+  animation-delay: -6s;
+}
+
+.confetti:nth-child(7) {
+  background-color: #f2d74e;
+  left: 70%;
+  animation-delay: -1.5s;
+}
+
+.confetti:nth-child(8) {
+  background-color: #95c3de;
+  left: 80%;
+  animation-delay: -2s;
+}
+
+.confetti:nth-child(9) {
+  background-color: #ff9a91;
+  left: 90%;
+  animation-delay: -3.5s;
+}
+
+@keyframes confetti {
+  0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+  25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vh,20vh); }
+  50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vh,60vh); }
+  75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vh,80vh); }
+  100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vh,110vh); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
 
 /* 
 - font size (px):
