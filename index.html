@@ -19,19 +19,19 @@
       <h1 class="game-title">Tic-Tac-Toe</h1>
       <!--  -->
       <div class="game-container">
-        <div class="cell player-x"></div>
-        <div class="cell player-o"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div data-index="0" class="cell"></div>
+        <div data-index="1" class="cell"></div>
+        <div data-index="2" class="cell"></div>
+        <div data-index="3" class="cell"></div>
+        <div data-index="4" class="cell"></div>
+        <div data-index="5" class="cell"></div>
+        <div data-index="6" class="cell"></div>
+        <div data-index="7" class="cell"></div>
+        <div data-index="8" class="cell"></div>
       </div>
       <!--  -->
-      <h2 class="game-status">Judith Tamino</h2>
-      <button class="btn restart-btn">Restart</button>
+      <h2 class="game-status"></h2>
+      <button class="btn restart-btn" onclick="restartGame()">Restart</button>
 
       <!--  -->
       <div class="backdrop hide-popup">
@@ -54,7 +54,7 @@
             <div class="confetti"></div>
           </div>
 
-          <i class='bx bx-x close-btn'></i>
+          <i class='bx bx-x close-btn' onclick="closePopup()"></i>
         </div>
       </div>
     </section>
